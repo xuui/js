@@ -1,4 +1,9 @@
 // Xuui jQuery-free
+"use strict";
+void function(){
+  console.log('xu.js runing...');
+}();
+
 //console.log($('div.col-1'));
 
 /* mini.js */
@@ -54,9 +59,9 @@ $=(function(document,window,$){
  *  
  */
 
-console.dir($('.col-md-1'));
+console.dir($('.col'));
 /*
-$('.col-md-1').on('click',function(){
+$('.col').on('click',function(){
   console.log(this+'on click');
 })
 */
