@@ -8,7 +8,8 @@ $.fn.xu_tabs=function(options){
   
   xu_tabs.siblings(opts.tabTatle).click(function(){
 	$(this).addClass('selected').siblings().removeClass();
-	xu_tabs.siblings(opts.tabPanel).eq(xu_tabs.siblings(opts.tabPanel).index(this)).show().siblings().hide();
+	//xu_tabs.siblings(opts.tabPanel).eq(xu_tabs.siblings(opts.tabPanel).index(this)).show().siblings().hide();
+	opts.tabPanel.eq(xu_tabs.siblings(opts.tabPanel).index(this)).show().siblings().hide();
   });
   
   /*
@@ -18,7 +19,7 @@ $.fn.xu_tabs=function(options){
   });
   */
   
-};  
+};
 })(jQuery); 
 ///////////////////////////////////////////////////////////////////////////////
 (function(){(function(jQuery){
