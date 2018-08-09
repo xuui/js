@@ -18,19 +18,6 @@ $.fn.xu_tabs=function(options){
   });
   */
   
-  function isPlaceHolder(){var input=document.createElement("input");return "placeholder" in input;}
-  if(!isPlaceHolder()){//alert('nooo');
-    var searchtext=$('#searchsite #s');
-	searchtext.focus(function(){
-	  if($(this).val()=='搜索本站...'){$(this).css({color:'#555'}).val('');}
-	}).blur(function(){
-	  if($(this).val()==''){$(this).css({color:'#aaa'}).val('搜索本站...');}
-	});
-	$(function(){if(searchtext.val()=='' || searchtext.val()=='搜索本站...'){
-	  searchtext.css({color:'#999'}).val('搜索本站...');
-	}});
-  }
-  
 };  
 })(jQuery); 
 ///////////////////////////////////////////////////////////////////////////////
