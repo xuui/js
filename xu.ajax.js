@@ -22,7 +22,7 @@ var get=request.bind(this,'GET');
 var post=request.bind(this,'POST');
 
 //request('GET','http://xuui.io/iot/data.json',function(data){
-get('http://xuui.io/iot/data.json',function(data){
+get('https://cdn.xuui.net/jtouch/resources/fonts/mdicons.json',function(data){
 //post('http://xuui.io/iot/xuiot.php?callback=',{'temperature':0,'humidity':2},function(data){
   console.log(data);
 });
