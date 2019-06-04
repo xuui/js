@@ -21,5 +21,5 @@ void function(){
   };
 
   console.log(rson);
-  document.write('<div style="word-wrap:break-word;">'+JSON.stringify(rson)+'</div>');
+  d.write('<div style="word-wrap:break-word;">'+JSON.stringify(rson)+'</div>');
 }();
