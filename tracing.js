@@ -16,9 +16,10 @@ void function(){
     'availHeight':s.availHeight,
     'colorDepth':s.colorDepth,
     'pixelDepth':s.pixelDepth,
+    's':s,
 
   };
 
   console.log(rson);
-  document.write(JSON.stringify(rson));
+  document.write('<div>'.JSON.stringify(rson)+'</div>');
 }();
