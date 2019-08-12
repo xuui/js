@@ -26,8 +26,8 @@
 </head>
 <body>
   <nav id="navt" class="xu-menu horizontal">
-      <li class="active"><a class="" href="#">Menu</a></li>
-      <li class=""><a class="" href="#">Navinfo</a></li>
+      <li class=""><a class="" href="#">Menu</a></li>
+      <li class="active"><a class="" href="#">Navinfo</a></li>
       <li class=""><a class="" href="#">JS</a></li>
       <li class=""><a class="" href="#">jQuery framework</a></li>
       <li class=""><a class="" href="#">Xu jQ</a></li>
@@ -39,25 +39,23 @@
 
 <script src="jquery/jquery.min.js"></script>
 <script>
-$('#navt .active').append('<i>');
-$('#navt .active i').css({
+$('#navt').append('<i>');
+$('#navt i').css({
   left:$('#navt .active').offset().left+16,
   width:$('#navt .active').width()-32
 });
-//var $thisnav = $('#navt .active').offset().left;
 $('#navt li').hover(function(){
-  var $left = $(this).offset().left;// - $thisnav;
+  var $left = $(this).offset().left;
   var $width = $(this).outerWidth();
   if($(this).hasClass('active')){
-    $('#navt .active i').css({'left':$left,'width':$width});
+    $('#navt i').css({'left':$left,'width':$width});
   }else{
-    $('#navt .active i').css({'left':$left+16,'width':$(this).outerWidth()-32});
+    $('#navt i').css({'left':$left+16,'width':$(this).outerWidth()-32});
   }
 },function(){
   var $initwidth = $('#navt .active').width();
-  $('#navt .active i').css({'left':$('#navt .active').offset().left+16,'width':$initwidth-32});
+  $('#navt i').css({'left':$('#navt .active').offset().left+16,'width':$initwidth-32});
 });
-
 </script>
 </body>
 </html>
