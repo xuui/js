@@ -9,17 +9,55 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <meta name="renderer" content="webkit">
-<title>xu.js</title>
+<title>jQuery Demo xu.js</title>
+<link rel="stylesheet" href="https://cdn.xuui.net/css/xu.css">
+<style>
+.xu-menu li a{padding:8px 16px;}
+
+#navt{position:relative;margin-bottom:40px}
+#navt i{
+  position:absolute;z-index:1;bottom:0;
+  background:#06a;
+  width:0;height:2px;
+  transition:.5s;
+}
+.active > a{background:#fff;}
+</style>
 </head>
 <body>
+  <nav id="navt" class="xu-menu horizontal">
+      <li class="active"><a class="" href="#">Menu</a></li>
+      <li class=""><a class="" href="#">Navinfo</a></li>
+      <li class=""><a class="" href="#">JS</a></li>
+      <li class=""><a class="" href="#">jQuery framework</a></li>
+      <li class=""><a class="" href="#">Xu jQ</a></li>
+  </nav>
 
   <div class="col">
-    Own JS framework. A l.
+    xuui Jquery demo.
   </div>
 
-<script src="jquery/jquery.slim.js"></script>
+<script src="jquery/jquery.min.js"></script>
 <script>
-  
+$('#navt .active').append('<i>');
+$('#navt .active i').css({
+  left:$('#navt .active').offset().left+16,
+  width:$('#navt .active').width()-32
+});
+//var $thisnav = $('#navt .active').offset().left;
+$('#navt li').hover(function(){
+  var $left = $(this).offset().left;// - $thisnav;
+  var $width = $(this).outerWidth();
+  if($(this).hasClass('active')){
+    $('#navt .active i').css({'left':$left,'width':$width});
+  }else{
+    $('#navt .active i').css({'left':$left+16,'width':$(this).outerWidth()-32});
+  }
+},function(){
+  var $initwidth = $('#navt .active').width();
+  $('#navt .active i').css({'left':$('#navt .active').offset().left+16,'width':$initwidth-32});
+});
+
 </script>
 </body>
 </html>
