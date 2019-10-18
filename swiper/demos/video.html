@@ -80,21 +80,21 @@ display:flex;
           videoBor.on("click",function(){
             swipervideo.autoplay.stop();
             var $video = $(this).find("video")[0];
-            if($video.paused){
-              var videoPoster =$(this).find(".posterBg");//当前封面对象
-              videoPoster.hide();
+            //if($video.paused){
+              //var videoPoster =$(this).find(".posterBg");//当前封面对象
+              //videoPoster.hide();
               $video.play();
-            }
+            //}
           });
           videolist.on("pause",function(){
             /*所有封面浮层show&所有视频hide*/
-            videoBor.find(".posterBg").show();
-            videoBor.find("video").hide();
+            //videoBor.find(".posterBg").show();
+            //videoBor.find("video").hide();
           });
 
           videolist.on("play",function(){
             /*当前视频show*/
-            $(this).show();
+            //$(this).show();
             if($(this)[0].play){
               swipervideo.autoplay.stop();
             }
